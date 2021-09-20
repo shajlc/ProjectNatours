@@ -6,9 +6,33 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+/*Inherit, cuando se fuerza la herencia*/
 
 * {
-  margin: 0;
+  margin: inherit; /*Cuando es 0 no se pone ni px ni nada, por quñe es una mala practica*/
   padding: 0;
+  box-sizing: border-box;
   /*box-sizing: border-box;*/
 }
+
+body{
+  margin: 10px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+}
+
+.header {
+  height: 95vh; /* 9Con esto se obtiene que se ocupe el 95% del tamaño de pantalla */
+  background-image: url('../img/hero.jpg');
+  /*Esto es un gradiente, lo que hace es va de un color a otro, poniendo un color de fondo, va linealmente
+  Hay otra pero lo hace en circulo, etc. En el lineal podemos escoger de dónde vamos a dónde de izq a der,
+  de arriba a abajo, etc, pero escogemos como queremos hacer el degradado*/
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url('../img/hero.jpg');
+  background-size: cover; /*Lo que hace es que la imagen no se deforme, contain te repite la imagen, pero al tamaño original*/
+  background-position: top; /* Me asegura que cuando se corte la imagen se corte otras parte spero no la parte de arriba*/
+}
+
+
